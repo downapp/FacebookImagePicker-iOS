@@ -33,6 +33,11 @@
     return self;
 }
 
+- (id)initWithAccessToken:(NSString*)accessToken {
+    [FBSDKAccessToken setCurrentAccessToken:accessToken];
+    self = [self init];
+}
+
 - (void)cancelButtonClicked{
     [self.delegate facebookImagePicker:self didFinishPickingImages:@[]];
 }
