@@ -12,6 +12,7 @@
 @class OLFacebookImage;
 
 @protocol OLFacebookImagePickerControllerDelegate <NSObject>
+- (id)initWithAccessToken:(NSString *)value;
 - (void)facebookImagePicker:(OLFacebookImagePickerController *)imagePicker didFailWithError:(NSError *)error;
 - (void)facebookImagePicker:(OLFacebookImagePickerController *)imagePicker didFinishPickingImages:(NSArray/*<OLFacebookImage>*/ *)images;
 - (void)facebookImagePickerDidCancelPickingImages:(OLFacebookImagePickerController *)imagePicker;

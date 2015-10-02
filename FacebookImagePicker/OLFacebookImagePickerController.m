@@ -33,8 +33,8 @@
     return self;
 }
 
-- (id)initWithAccessToken:(NSString*)accessToken {
-    [FBSDKAccessToken setCurrentAccessToken:accessToken];
+- (id)initWithAccessToken:(NSString*)value {
+    [FBSDKAccessToken setCurrentAccessToken:value];
     self = [self init];
 }
 
