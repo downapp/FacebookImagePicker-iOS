@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = 'DownFacebookImagePicker'
+  s.name         = 'FacebookImagePicker'
   s.version      = '2.0.6'
   s.license      = 'MIT'
   s.summary      = 'An image/photo picker for Facebook albums & photos modelled after UIImagePickerController'
