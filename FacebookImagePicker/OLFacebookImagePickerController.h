@@ -12,7 +12,7 @@
 @class OLFacebookImage;
 
 @protocol OLFacebookImagePickerControllerDelegate <NSObject>
-- (id)initWithAccessToken:(NSString *)value;
+
 - (void)facebookImagePicker:(OLFacebookImagePickerController *)imagePicker didFailWithError:(NSError *)error;
 - (void)facebookImagePicker:(OLFacebookImagePickerController *)imagePicker didFinishPickingImages:(NSArray/*<OLFacebookImage>*/ *)images;
 - (void)facebookImagePickerDidCancelPickingImages:(OLFacebookImagePickerController *)imagePicker;
@@ -30,6 +30,14 @@
  https://developers.facebook.com/docs/ios/getting-started
  */
 @interface OLFacebookImagePickerController : UINavigationController
+
+- (id)initWithAccessToken:(NSString *)tokenString
+              permissions:	(NSArray *)permissions
+      declinedPermissions:	(NSArray *)declinedPermissions
+                    appID:	(NSString *)appID
+                   userID:	(NSString *)userID
+           expirationDate:	(NSDate *)expirationDate
+              refreshDate:	(NSDate *)refreshDate;
 
 /**
  The image picker’s delegate object.

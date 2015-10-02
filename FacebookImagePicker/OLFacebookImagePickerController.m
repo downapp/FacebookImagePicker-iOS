@@ -21,21 +21,33 @@
 @dynamic delegate;
 
 - (id)init {
+    return [self initWithAccessToken:nil permissions:nil declinedPermissions:nil appID:nil userID:nil expirationDate:nil refreshDate:nil];
+}
+
+- (id)initWithAccessToken:  (NSString *)tokenString
+              permissions:	(NSArray *)permissions
+      declinedPermissions:	(NSArray *)declinedPermissions
+                    appID:	(NSString *)appID
+                   userID:	(NSString *)userID
+           expirationDate:	(NSDate *)expirationDate
+              refreshDate:	(NSDate *)refreshDate
+{
     UIViewController *vc = [[UIViewController alloc] init];
     vc.view.backgroundColor = [UIColor whiteColor];
     vc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelButtonClicked)];
     if (self = [super initWithRootViewController:vc]) {
+        if (tokenString)
+        {
+            FBSDKAccessToken *accessToken = [[FBSDKAccessToken alloc]
+                                             initWithTokenString:tokenString permissions:permissions declinedPermissions:declinedPermissions appID:appID userID:userID expirationDate:expirationDate refreshDate:refreshDate];
+            [FBSDKAccessToken setCurrentAccessToken:accessToken];
+         }
         if ([FBSDKAccessToken currentAccessToken]){
             [self showAlbumList];
         }
     }
     
     return self;
-}
-
-- (id)initWithAccessToken:(NSString*)value {
-    [FBSDKAccessToken setCurrentAccessToken:value];
-    self = [self init];
 }
 
 - (void)cancelButtonClicked{
