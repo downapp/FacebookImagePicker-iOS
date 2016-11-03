@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E5BDC4C1CEDF3B600257B1A /* OLFacebookImageDownloadDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BDC491CEDF3B600257B1A /* OLFacebookImageDownloadDelegate.m */; };
+		2E5BDC4D1CEDF3B600257B1A /* OLFacebookImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BDC4B1CEDF3B600257B1A /* OLFacebookImageDownloader.m */; };
 		3D0D7AC91AC07B8400746FC8 /* UIImageView+FacebookFadeIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0D7AC81AC07B8400746FC8 /* UIImageView+FacebookFadeIn.m */; };
 		985B68DCADDD486BAD08BC6B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 358D8857B0F243D7BEA15A1E /* libPods.a */; };
 		CD73BEDE185E220E0009DE03 /* OLFacebookAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = CD73BEDD185E220E0009DE03 /* OLFacebookAlbum.m */; };
@@ -49,6 +51,10 @@
 
 /* Begin PBXFileReference section */
 		144025EE631714E88B7F3F86 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		2E5BDC481CEDF3B600257B1A /* OLFacebookImageDownloadDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLFacebookImageDownloadDelegate.h; sourceTree = "<group>"; };
+		2E5BDC491CEDF3B600257B1A /* OLFacebookImageDownloadDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLFacebookImageDownloadDelegate.m; sourceTree = "<group>"; };
+		2E5BDC4A1CEDF3B600257B1A /* OLFacebookImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLFacebookImageDownloader.h; sourceTree = "<group>"; };
+		2E5BDC4B1CEDF3B600257B1A /* OLFacebookImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLFacebookImageDownloader.m; sourceTree = "<group>"; };
 		358D8857B0F243D7BEA15A1E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D0D7AC71AC07B8400746FC8 /* UIImageView+FacebookFadeIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+FacebookFadeIn.h"; sourceTree = "<group>"; };
 		3D0D7AC81AC07B8400746FC8 /* UIImageView+FacebookFadeIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+FacebookFadeIn.m"; sourceTree = "<group>"; };
@@ -162,6 +168,10 @@
 				CD73BEED185F0BC20009DE03 /* OLFacebookPhotosForAlbumRequest.m */,
 				CD73BEE7185EFFFB0009DE03 /* OLFacebookImagePickerConstants.h */,
 				CD73BEE8185EFFFB0009DE03 /* OLFacebookImagePickerConstants.m */,
+				2E5BDC481CEDF3B600257B1A /* OLFacebookImageDownloadDelegate.h */,
+				2E5BDC491CEDF3B600257B1A /* OLFacebookImageDownloadDelegate.m */,
+				2E5BDC4A1CEDF3B600257B1A /* OLFacebookImageDownloader.h */,
+				2E5BDC4B1CEDF3B600257B1A /* OLFacebookImageDownloader.m */,
 			);
 			name = Private;
 			sourceTree = "<group>";
@@ -312,6 +322,7 @@
 				CD9AF167185E206A00A56B3F /* Frameworks */,
 				CD9AF168185E206A00A56B3F /* Resources */,
 				2ABCD2088C26466188B435FE /* Copy Pods Resources */,
+				BCF23303496CDCB5CCE7D043 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -431,6 +442,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		BCF23303496CDCB5CCE7D043 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -445,8 +471,10 @@
 				3D0D7AC91AC07B8400746FC8 /* UIImageView+FacebookFadeIn.m in Sources */,
 				CD73BEE1185E221B0009DE03 /* OLFacebookImage.m in Sources */,
 				CD73BF5C185F7B560009DE03 /* OLFacebookImagePickerCell.m in Sources */,
+				2E5BDC4C1CEDF3B600257B1A /* OLFacebookImageDownloadDelegate.m in Sources */,
 				CD73BEDE185E220E0009DE03 /* OLFacebookAlbum.m in Sources */,
 				CD73BEEE185F0BC20009DE03 /* OLFacebookPhotosForAlbumRequest.m in Sources */,
+				2E5BDC4D1CEDF3B600257B1A /* OLFacebookImageDownloader.m in Sources */,
 				CD73BEF2185F22C00009DE03 /* OLFacebookImagePickerController.m in Sources */,
 				CD73BF54185F6C570009DE03 /* OLPhotoViewController.m in Sources */,
 				CD73BEE4185E22480009DE03 /* OLFacebookAlbumRequest.m in Sources */,

@@ -49,4 +49,6 @@
  */
 @property (nonatomic, copy) NSArray/*<OLFacebookImage>*/ *selected;
 
+@property (nonatomic, assign) BOOL shouldDisplayLogoutButton;
+
 @end
