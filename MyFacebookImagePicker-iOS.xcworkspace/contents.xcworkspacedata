@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:FacebookImagePicker"
+      name = "FacebookImagePicker">
+      <Group
+         location = "group:FacebookImagePicker"
+         name = "FacebookImagePicker">
+         <FileRef
+            location = "group:AppDelegate.h">
+         </FileRef>
+         <FileRef
+            location = "group:AppDelegate.m">
+         </FileRef>
+         <Group
+            location = "group:Base.lproj"
+            name = "Base.lproj">
+            <FileRef
+               location = "group:Main.storyboard">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:en.lproj"
+            name = "en.lproj">
+            <FileRef
+               location = "group:InfoPlist.strings">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:FacebookImagePicker-Info.plist">
+         </FileRef>
+         <FileRef
+            location = "group:FacebookImagePicker-Prefix.pch">
+         </FileRef>
+         <Group
+            location = "group:Images.xcassets"
+            name = "Images.xcassets">
+            <Group
+               location = "group:AppIcon.appiconset"
+               name = "AppIcon.appiconset">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:LaunchImage.launchimage"
+               name = "LaunchImage.launchimage">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+         </Group>
+         <FileRef
+            location = "group:main.m">
+         </FileRef>
+         <FileRef
+            location = "group:ViewController.h">
+         </FileRef>
+         <FileRef
+            location = "group:ViewController.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:FacebookImagePicker.xcassets"
+         name = "FacebookImagePicker.xcassets">
+         <Group
+            location = "group:album_placeholder.imageset"
+            name = "album_placeholder.imageset">
+            <FileRef
+               location = "group:album_placeholder@2x.png">
+            </FileRef>
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:CTAssetsPickerChecked.imageset"
+            name = "CTAssetsPickerChecked.imageset">
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+            <FileRef
+               location = "group:CTAssetsPickerChecked.png">
+            </FileRef>
+            <FileRef
+               location = "group:CTAssetsPickerChecked@2x.png">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:CTAssetsPickerChecked~iOS6.imageset"
+            name = "CTAssetsPickerChecked~iOS6.imageset">
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+            <FileRef
+               location = "group:CTAssetsPickerChecked~iOS6.png">
+            </FileRef>
+            <FileRef
+               location = "group:CTAssetsPickerChecked~iOS6@2x.png">
+            </FileRef>
+         </Group>
+      </Group>
+      <FileRef
+         location = "group:FacebookImagePicker.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:FacebookImagePicker.xcworkspace">
+      </FileRef>
+      <Group
+         location = "group:FacebookImagePickerTests"
+         name = "FacebookImagePickerTests">
+         <Group
+            location = "group:en.lproj"
+            name = "en.lproj">
+            <FileRef
+               location = "group:InfoPlist.strings">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:FacebookImagePickerTests-Info.plist">
+         </FileRef>
+         <FileRef
+            location = "group:FacebookImagePickerTests.m">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:OLAlbumViewController.h">
+      </FileRef>
+      <FileRef
+         location = "group:OLAlbumViewController.m">
+      </FileRef>
+      <FileRef
+         location = "group:OLAlbumViewController.xib">
+      </FileRef>
+      <FileRef
+         location = "group:OLFacebookAlbum.h">
+      </FileRef>
+      <FileRef
+         location = "group:OLFacebookAlbum.m">
+      </FileRef>
+      <FileRef
+         location = "group:OLFacebookAlbumRequest.h">
+      </FileRef>
+      <FileRef
+         location = "group:OLFacebookAlbumRequest.m">
+      </FileRef>
+      <FileRef
+         location = "group:OLFacebookImage.h">
+      </FileRef>
+      <FileRef
+         location = "group:OLFacebookImage.m">
+      </FileRef>
+      <FileRef
+         location = "group:OLFacebookImagePickerCell.h">
+      </FileRef>
+      <FileRef
+         location = "group:OLFacebookImagePickerCell.m">
+      </FileRef>
+      <FileRef
+         location = "group:OLFacebookImagePickerConstants.h">
+      </FileRef>
+      <FileRef
+         location = "group:OLFacebookImagePickerConstants.m">
+      </FileRef>
+      <FileRef
+         location = "group:OLFacebookImagePickerController.h">
+      </FileRef>
+      <FileRef
+         location = "group:OLFacebookImagePickerController.m">
+      </FileRef>
+      <FileRef
+         location = "group:OLFacebookPhotosForAlbumRequest.h">
+      </FileRef>
+      <FileRef
+         location = "group:OLFacebookPhotosForAlbumRequest.m">
+      </FileRef>
+      <FileRef
+         location = "group:OLPhotoViewController.h">
+      </FileRef>
+      <FileRef
+         location = "group:OLPhotoViewController.m">
+      </FileRef>
+      <FileRef
+         location = "group:OLPhotoViewController.xib">
+      </FileRef>
+      <FileRef
+         location = "group:Podfile">
+      </FileRef>
+      <FileRef
+         location = "group:Podfile.lock">
+      </FileRef>
+      <FileRef
+         location = "group:UIImageView+FacebookFadeIn.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIImageView+FacebookFadeIn.m">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:FacebookImagePicker.podspec">
+   </FileRef>
+   <FileRef
+      location = "group:LICENSE">
+   </FileRef>
+   <FileRef
+      location = "group:preview.png">
+   </FileRef>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+</Workspace>
