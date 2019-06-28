@@ -31,6 +31,7 @@
                    userID:	(NSString *)userID
            expirationDate:	(NSDate *)expirationDate
               refreshDate:	(NSDate *)refreshDate
+              dataAccessExpirationDate:    (NSDate *)dataAccessExpirationDate
 {
     UIViewController *vc = [[UIViewController alloc] init];
     vc.view.backgroundColor = [UIColor whiteColor];
@@ -39,7 +40,7 @@
         if (tokenString)
         {
             FBSDKAccessToken *accessToken = [[FBSDKAccessToken alloc]
-                                             initWithTokenString:tokenString permissions:permissions declinedPermissions:declinedPermissions appID:appID userID:userID expirationDate:expirationDate refreshDate:refreshDate];
+                                              initWithTokenString:tokenString permissions:permissions declinedPermissions:declinedPermissions appID:appID userID:userID expirationDate:expirationDate refreshDate:refreshDate dataAccessExpirationDate: dataAccessExpirationDate];
             [FBSDKAccessToken setCurrentAccessToken:accessToken];
          }
         _shouldDisplayLogoutButton = YES;

@@ -37,7 +37,7 @@
                     appID:	(NSString *)appID
                    userID:	(NSString *)userID
            expirationDate:	(NSDate *)expirationDate
-              refreshDate:	(NSDate *)refreshDate;
+              refreshDate:	(NSDate *)refreshDate dataAccessExpirationDate: (NSDate *)dataAccessExpirationDate;
 
 /**
  The image picker’s delegate object.
