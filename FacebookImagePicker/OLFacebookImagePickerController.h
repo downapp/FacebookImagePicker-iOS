@@ -31,13 +31,15 @@
  */
 @interface OLFacebookImagePickerController : UINavigationController
 
-- (id)initWithAccessToken:(NSString *)tokenString
-              permissions:	(NSArray *)permissions
-      declinedPermissions:	(NSArray *)declinedPermissions
-                    appID:	(NSString *)appID
-                   userID:	(NSString *)userID
-           expirationDate:	(NSDate *)expirationDate
-              refreshDate:	(NSDate *)refreshDate dataAccessExpirationDate: (NSDate *)dataAccessExpirationDate;
+- (id)initWithAccessToken:  (NSString *)tokenString
+              permissions:    (NSArray *)permissions
+      declinedPermissions:    (NSArray *)declinedPermissions
+       expiredPermissions: (NSArray *)expiredPermissions
+                    appID:    (NSString *)appID
+                   userID:    (NSString *)userID
+           expirationDate:    (NSDate *)expirationDate
+              refreshDate:    (NSDate *)refreshDate
+ dataAccessExpirationDate: (NSDate *)dataAccessExpirationDate;
 
 /**
  The image picker’s delegate object.

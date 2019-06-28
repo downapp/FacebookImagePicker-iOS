@@ -26,7 +26,7 @@
     [super viewDidLoad];
     
     FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
-    loginButton.readPermissions = @[@"public_profile",  @"user_photos"];
+    loginButton.permissions = @[@"public_profile",  @"user_photos"];
     CGRect f = loginButton.frame;
     f.origin.x = (self.view.frame.size.width - f.size.width) / 2;
     f.origin.y = (self.view.frame.size.height - f.size.height) / 2;
