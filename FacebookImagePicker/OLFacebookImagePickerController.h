@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@import FBSDKCoreKit;
 @class OLFacebookImagePickerController;
 @class OLFacebookImage;
 
