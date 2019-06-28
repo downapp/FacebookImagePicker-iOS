@@ -41,6 +41,7 @@
               refreshDate:    (NSDate *)refreshDate
  dataAccessExpirationDate: (NSDate *)dataAccessExpirationDate;
 
+- (id)initWithDefaultAccessToken:(FBSDKAccessToken *)accessToken;
 /**
  The image picker’s delegate object.
  */

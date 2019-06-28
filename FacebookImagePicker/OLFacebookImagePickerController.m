@@ -53,6 +53,23 @@
     return self;
 }
 
+- (id)initWithDefaultAccessToken:(FBSDKAccessToken *)accessToken {
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view.backgroundColor = [UIColor whiteColor];
+    vc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelButtonClicked)];
+    if (self = [super initWithRootViewController:vc]) {
+        if (accessToken.tokenString) {
+         [FBSDKAccessToken setCurrentAccessToken:accessToken];
+        }
+        _shouldDisplayLogoutButton = YES;
+        if ([FBSDKAccessToken currentAccessToken]){
+            [self showAlbumList];
+        }
+    }
+    
+    return self;
+}
+
 - (void)cancelButtonClicked{
     [self.delegate facebookImagePicker:self didFinishPickingImages:@[]];
 }
