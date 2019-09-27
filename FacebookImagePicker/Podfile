@@ -5,7 +5,7 @@ workspace 'MyFacebookImagePicker-iOS'
 
 target 'FacebookImagePicker' do
 
-pod 'FBSDKCoreKit', '~> 5.1.1'
-pod 'FBSDKLoginKit', '~> 5.1.1'
+pod 'FBSDKCoreKit'
+pod 'FBSDKLoginKit'
 
 end
