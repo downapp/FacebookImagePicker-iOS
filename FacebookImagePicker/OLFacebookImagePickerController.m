@@ -21,16 +21,18 @@
 @dynamic delegate;
 
 - (id)init {
-    return [self initWithAccessToken:nil permissions:nil declinedPermissions:nil appID:nil userID:nil expirationDate:nil refreshDate:nil];
+    return [self initWithAccessToken:nil permissions:nil declinedPermissions:nil expiredPermissions:nil appID:nil userID:nil expirationDate:nil refreshDate:nil dataAccessExpirationDate: nil];
 }
 
 - (id)initWithAccessToken:  (NSString *)tokenString
               permissions:	(NSArray *)permissions
       declinedPermissions:	(NSArray *)declinedPermissions
+        : (NSArray *)expiredPermissions
                     appID:	(NSString *)appID
                    userID:	(NSString *)userID
            expirationDate:	(NSDate *)expirationDate
               refreshDate:	(NSDate *)refreshDate
+              dataAccessExpirationDate: (NSDate *)dataAccessExpirationDate
 {
     UIViewController *vc = [[UIViewController alloc] init];
     vc.view.backgroundColor = [UIColor whiteColor];
@@ -38,12 +40,28 @@
     if (self = [super initWithRootViewController:vc]) {
         if (tokenString)
         {
-            FBSDKAccessToken *accessToken = [[FBSDKAccessToken alloc]
-                                             initWithTokenString:tokenString permissions:permissions declinedPermissions:declinedPermissions appID:appID userID:userID expirationDate:expirationDate refreshDate:refreshDate];
+            FBSDKAccessToken *accessToken = [[FBSDKAccessToken alloc] initWithTokenString:tokenString permissions:permissions declinedPermissions:declinedPermissions expiredPermissions:expiredPermissions appID:appID userID:userID expirationDate:expirationDate refreshDate:refreshDate dataAccessExpirationDate:dataAccessExpirationDate];
             [FBSDKAccessToken setCurrentAccessToken:accessToken];
          }
         _shouldDisplayLogoutButton = YES;
 
+        if ([FBSDKAccessToken currentAccessToken]){
+            [self showAlbumList];
+        }
+    }
+    
+    return self;
+}
+
+- (id)initWithDefaultAccessToken:(FBSDKAccessToken *)accessToken {
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view.backgroundColor = [UIColor whiteColor];
+    vc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelButtonClicked)];
+    if (self = [super initWithRootViewController:vc]) {
+        if (accessToken.tokenString) {
+         [FBSDKAccessToken setCurrentAccessToken:accessToken];
+        }
+        _shouldDisplayLogoutButton = YES;
         if ([FBSDKAccessToken currentAccessToken]){
             [self showAlbumList];
         }
